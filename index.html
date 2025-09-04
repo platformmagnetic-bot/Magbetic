@@ -90,5 +90,11 @@
     menu.classList.toggle('opacity-100');
     menu.classList.toggle('translate-y-0');
   });
+   // Mobile nav toggle
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
 </script>
   </html>
