@@ -3,52 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magnetic</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Magnetic — Trade scrap. Earn more. Fuel the circular economy.</title>
-  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <!-- Header -->
-  <header class="container head">
-    <h1>Magnetic</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="listings.html">Marketplace</a>
-      <a href="about.html">About</a>
-      <a href="login.html">Login</a>
-    </nav>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-2">
+          <img src="assets/logo.png" alt="Magnetic Logo" class="h-10 w-auto sm:h-12" />
+          <span class="sr-only">Magnetic</span>
+        </a>
+
+        <!-- Nav links -->
+        <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+          <a href="#" class="hover:text-blue-600">Home</a>
+          <a href="#" class="hover:text-blue-600">About</a>
+          <a href="#" class="hover:text-blue-600">Marketplace</a>
+          <a href="#" class="hover:text-blue-600">Login</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none text-2xl">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero container">
-    <h2>Trade scrap. Earn more. Fuel the circular economy.</h2>
-    <p>
-      A global B2B platform where recyclers, manufacturers, and traders connect 
-      to turn waste into profit and measurable impact — with verified buyers, 
-      transparent pricing, and compliance-ready reporting.
-    </p>
-    <a class="btn" href="listings.html">Post a Listing</a>
+  <!-- Mobile Nav (hidden by default) -->
+  <div id="mobile-menu" class="hidden bg-white border-t border-gray-200 md:hidden">
+    <nav class="flex flex-col space-y-2 p-4 text-gray-700 font-medium">
+      <a href="#" class="hover:text-blue-600">Home</a>
+      <a href="#" class="hover:text-blue-600">About</a>
+      <a href="#" class="hover:text-blue-600">Marketplace</a>
+      <a href="#" class="hover:text-blue-600">Login</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="bg-gray-100">
+    <div class="max-w-3xl mx-auto px-6 py-20 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
+        Trade scrap. Earn more.<br />Fuel the circular economy.
+      </h2>
+      <p class="mt-6 text-lg text-gray-700 leading-relaxed">
+        A global B2B platform where recyclers, manufacturers, and traders connect
+        to turn waste into profit and measurable impact — with verified buyers,
+        transparent pricing, and compliance-ready reporting.
+      </p>
+      <div class="mt-8">
+        <a href="#"
+           class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-800">
+          Post a Listing
+        </a>
+      </div>
+    </div>
   </section>
 
-  <!-- Key Benefits -->
-  <section class="container benefits">
-    <div class="benefit">
-      <h3>✅ Verified Buyers</h3>
-      <p>We verify every buyer and seller to ensure trust and safety.</p>
-    </div>
-    <div class="benefit">
-      <h3>💸 Transparent Pricing</h3>
-      <p>Get real-time insights into fair market scrap pricing.</p>
-    </div>
-    <div class="benefit">
-      <h3>📊 Compliance Ready</h3>
-      <p>Generate export, import, and recycling compliance reports with ease.</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="container foot">
-    <small>© Magnetic • Trade scrap. Earn more. Fuel the circular economy.</small>
-  </footer>
 </body>
-</html>
+<script>
+  // Mobile nav toggle
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+        </html>
