@@ -7,46 +7,44 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-800">
-  <nav class="bg-white shadow-md fixed top-0 w-full z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16">
-      <!-- Logo -->
-      <a href="/" class="flex items-center space-x-2">
-        <img src="assets/logo.jpg" 
-             alt="Magnetic Logo" 
-             class="h-8 w-auto sm:h-10 md:h-12 lg:h-14 transition-all duration-300" />
-      </a>
+<!-- Navbar -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        
+        <!-- Logo -->
+    <a href="/" class="flex items-center space-x-2">
+       <img src="assets/logo.png" 
+       alt="Magnetic Logo" 
+       class="h-8 w-auto sm:h-10 md:h-12 lg:h-14" />
+       </a>
 
-      <!-- Desktop Menu -->
-      <div class="hidden md:flex items-center space-x-6">
-        <a href="/" class="text-gray-700 hover:text-green-600 transition duration-300">Home</a>
-        <a href="/about" class="text-gray-700 hover:text-green-600 transition duration-300">About</a>
-        <a href="/marketplace" class="text-gray-700 hover:text-green-600 transition duration-300">Marketplace</a>
-        <a href="/login" class="text-gray-700 hover:text-green-600 transition duration-300">Login</a>
-      </div>
+        <!-- Nav links -->
+        <nav class="hidden md:flex space-x-8 font-medium">
+          <a href="#" class="text-gray-700 hover:text-green-600">Home</a>
+          <a href="#" class="text-gray-700 hover:text-green-600">About</a>
+          <a href="#" class="text-gray-700 hover:text-green-600">Marketplace</a>
+          <a href="#" class="text-gray-700 hover:text-green-600">Login</a>
+        </nav>
 
-      <!-- Mobile Menu Button -->
-      <div class="md:hidden flex items-center">
-        <button id="menu-btn" class="focus:outline-none">
-          <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                  d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none text-2xl">
+            ☰
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-
-  <!-- Mobile Menu (Animated) -->
-  <div id="menu" class="md:hidden transform -translate-y-full opacity-0 transition-all duration-500 ease-in-out bg-white shadow-lg">
-    <div class="px-4 pt-4 pb-6 space-y-4">
-      <a href="/" class="block text-gray-700 hover:text-green-600 transition duration-300">Home</a>
-      <a href="/about" class="block text-gray-700 hover:text-green-600 transition duration-300">About</a>
-      <a href="/marketplace" class="block text-gray-700 hover:text-green-600 transition duration-300">Marketplace</a>
-      <a href="/login" class="block text-gray-700 hover:text-green-600 transition duration-300">Login</a>
-    </div>
-  </div>
-</nav>
+  </header>
+<!-- Mobile Nav -->
+  <div id="mobile-menu" class="hidden bg-white border-t border-gray-200 md:hidden">
+    <nav class="flex flex-col space-y-2 p-4 font-medium">
+      <a href="#" class="text-gray-700 hover:text-green-600">Home</a>
+      <a href="#" class="text-gray-700 hover:text-green-600">About</a>
+      <a href="#" class="text-gray-700 hover:text-green-600">Marketplace</a>
+      <a href="#" class="text-gray-700 hover:text-green-600">Login</a>
+    </nav>
+        </div>
 
   <!-- Hero Section -->
   <section class="bg-gradient-to-r from-green-50 via-white to-green-50">
